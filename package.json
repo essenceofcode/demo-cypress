@@ -1,0 +1,15 @@
+{
+  "name": "demo-cypress",
+  "version": "1.0.0",
+  "description": "Demo project for cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "cypress run --spec \"cypress/integration/0-presentation-demo/**\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.3.1"
+  }
+}
