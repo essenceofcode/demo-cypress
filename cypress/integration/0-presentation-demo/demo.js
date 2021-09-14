@@ -1,25 +1,24 @@
 describe('example to-do app', () => {
     beforeEach(() => {
 
-        cy.visit('https://example.cypress.io/todo')
-    })
+        cy.visit('http://127.0.0.1:8080/index.html');
+    });
   
-    it('displays two todo items by default', () => {
+    it('searches for customers', () => {
 
-        cy.get('.todo-list li').should('have.length', 2)
+        cy.get('#search-input').type('Ted Lasso')
   
-        cy.get('.todo-list li').first().should('have.text', 'Pay electric bill')
-        cy.get('.todo-list li').last().should('have.text', 'Walk the dog')
-    })
+        cy.get('#search-button').click();
+
+        cy.get('#results').should('have.text', 'Ted Lasso')
+    });  
+
+    it('searches for customers', () => {
+
+        cy.get('#search-input').type('Ted Lasso')
   
-    it('can add new todo items', () => {
-      const newItem = 'Feed the cat'
-  
-      cy.get('[data-test=new-todo]').type(`${newItem}{enter}`)
-  
-      cy.get('.todo-list li')
-        .should('have.length', 3)
-        .last()
-        .should('have.text', newItem)
-    })
-})  
+        cy.get('#search-button').click();
+
+        cy.get('#results').should('have.text', 'Ted Lasso')
+    });  
+}) ;
