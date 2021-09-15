@@ -4,17 +4,33 @@ const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
+const displayResults = (data) => {
+
+    const resultsElement = document.querySelector('#results');
+
+    const list = document.createElement("ul");
+
+    data.forEach(value => {
+
+        const listItem = document.createElement("li");
+        listItem.innerHTML = value.name;  
+        list.appendChild(listItem);             
+    });
+
+    resultsElement.appendChild(list);
+};
+
 searchButton.addEventListener('click', (e) => {
 
     sleep(5000).then(() => {
         const searchInput = document.querySelector('#search-input').value;
 
-        fetch(`customers?searchInput=${searchInput}`).then(response => {
+        fetch(`api/customers?searchInput=${searchInput}`).then(response => {
             
             if (response.ok){
-                document.querySelector('#results').innerHTML = response.json;
+                response.json().then(data =>  displayResults(data));
             } else {
-                document.querySelector('#error').innerHTML = 'Fetch failed!';
+                document.querySelector('#results').innerHTML = 'Fetch failed!';
             }
         }).catch(err => {
     
