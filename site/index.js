@@ -22,7 +22,7 @@ const displayResults = (data) => {
 
 searchButton.addEventListener('click', (e) => {
 
-    sleep(5000).then(() => {
+    sleep(4500).then(() => {
         const searchInput = document.querySelector('#search-input').value;
 
         fetch(`api/customers?searchInput=${searchInput}`).then(response => {

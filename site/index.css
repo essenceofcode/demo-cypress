@@ -1,0 +1,10 @@
+.demo-form {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    margin: 1rem -.75rem 0;
+    border: solid #dee2e6;
+}
