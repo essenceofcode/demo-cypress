@@ -1,5 +1,26 @@
-[{
-  "name": "Ted Lasso",
-  "email": "awesome@richmondsoccer.io",
-  "title": "Best football coach in England"
-}]
+[
+  {
+    "name": "Ted Lasso",
+    "email": "awesome@richmondsoccer.io",
+    "description": "Best football coach in England.",
+    "title": "Head Coach"
+  },
+  {
+    "name": "Coach Beard",
+    "email": "beard@richmondsoccer.io",
+    "description": "Best supporting football coach in England.",
+    "title": "Assistant Coach"
+  },
+  {
+    "name": "Roy Kent",
+    "email": "kent@richmondsoccer.io",
+    "description": "Most honest football coach in England.",
+    "title": "Assistant Head Coach"
+  },
+  {
+    "name": "Nathan Shelley",
+    "email": "nathan@richmondsoccer.io",
+    "description": "Newest football coach in England",
+    "title": "Assistant Coach"
+  }
+]

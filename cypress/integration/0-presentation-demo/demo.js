@@ -7,14 +7,14 @@ describe('example to-do app', () => {
 
     it('searches for customers', () => {
 
-        cy.intercept('GET', '/api/customers?*', { fixture: 'customers.json' }).as('customers');
+        cy.intercept('GET', '/api/customers?*', {fixture: 'customers.json'}).as('customers');
 
-        cy.get('[data-test=search-input]').type('Ted Lasso')
+        cy.get('[data-test=search-input]').type('Coach')
   
         cy.get('[data-test=search-button]').click();
 
         cy.wait('@customers');
 
-        cy.get('[data-test=results]').should('have.text', 'Ted Lasso');
-    });        
+        cy.get('[data-test=results').should('contains.text', 'Ted Lasso')
+    });   
 }) ;
